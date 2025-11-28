@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Homes for Kids – Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-decor">
+    <div class="hill hill-left"></div>
+    <div class="hill hill-right"></div>
+    <div class="flower flower-1"></div>
+    <div class="flower flower-2"></div>
+  </div>
+
+  <main class="wrapper">
+    <section class="card">
+      <header class="logo-area">
+        <!-- Replace src with your actual logo file path -->
+        <img src="image (15).jpg" alt="Homes for Kids logo" class="logo" />
+        <div class="logo-text">
+          <h1>Homes for Kids</h1>
+          <p class="tagline">Bright futures, safe homes.</p>
+        </div>
+      </header>
+
+      <section class="content">
+        <h2>Website coming soon</h2>
+        <p>
+          Homes for Kids is a children’s charity helping create safe, loving homes and brighter days
+          for vulnerable young people.
+        </p>
+        <p>
+          Our full website is on the way. Leave your email and be the first to hear when we launch.
+        </p>
+
+        <form class="notify-form" id="notifyForm">
+          <div class="form-row">
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <button type="submit">Notify me</button>
+          </div>
+          <p class="form-message" id="formMessage"></p>
+        </form>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <h3>Our mission</h3>
+            <p>Providing safe homes, emotional support and opportunities for children who need them most.</p>
+          </div>
+          <div class="info-box">
+            <h3>How you can help</h3>
+            <p>Donate, volunteer or partner with us to bring stability, sunshine and play back into children’s lives.</p>
+          </div>
+        </div>
+
+        <div class="countdown" id="countdown">
+          <div class="countdown-item">
+            <span class="number" id="days">00</span>
+            <span class="label">Days</span>
+          </div>
+          <div class="countdown-item">
+            <span class="number" id="hours">00</span>
+            <span class="label">Hours</span>
+          </div>
+          <div class="countdown-item">
+            <span class="number" id="minutes">00</span>
+            <span class="label">Minutes</span>
+          </div>
+          <div class="countdown-item">
+            <span class="number" id="seconds">00</span>
+            <span class="label">Seconds</span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>Questions or partnership ideas? Email us at <a href="mailto:hello@homesforkids.org.uk">hello@homesforkids.org.uk</a></p>
+        <p class="small-print">Homes for Kids · Registered children’s charity</p>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

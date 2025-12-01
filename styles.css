@@ -108,7 +108,6 @@ body {
   width: min(80vw, 300px);
   height: auto;
   margin: 0 auto 24px;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 h1 {
@@ -150,5 +149,6 @@ p {
     margin-bottom: 18px;
   }
 }
+
 
 

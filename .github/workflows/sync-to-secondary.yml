@@ -9,14 +9,11 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source repo
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Push to secondary repo
+      - name: Push to H4K
         run: |
-          git config user.name "oyeowart"
-          git config user.email "oliver.yeowart@cavalrycare.co.uk"
-          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/oyeowart/H4K.git
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/oyeowart/H4K.git HEAD:main --force
+          git push https://oyeowart:${{ secrets.PAT_TOKEN }}@github.com/oyeowart/H4K.git HEAD:main --force

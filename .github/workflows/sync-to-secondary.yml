@@ -11,18 +11,14 @@ jobs:
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.PAT_TOKEN }}
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Push to secondary repo
+        uses: cpina/github-action-push-to-another-repository@main
         env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
-        run: |
-          git remote add secondary https://${PAT_TOKEN}@github.com/oyeowart/H4K.git
-          git push secondary main:main --force
+          API_TOKEN_GITHUB: ${{ secrets.PAT_TOKEN }}
+        with:
+          source-directory: '.'
+          destination-github-username: 'oyeowart'
+          destination-repository-name: 'H4K'
+          user-email: github-actions[bot]@users.noreply.github.com
+          target-branch: main

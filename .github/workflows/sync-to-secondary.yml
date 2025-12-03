@@ -16,5 +16,5 @@ jobs:
 
       - name: Push to secondary repo
         run: |
-          git remote add secondary https://${{ secrets.PAT_TOKEN }}@github.com/OYEOWART/H4K.git
+          git remote add secondary https://${{ secrets.PAT_TOKEN }}@github.com/oyeowart/H4K.git
           git push secondary main:main --force

@@ -11,14 +11,12 @@ jobs:
     steps:
       - name: Checkout source repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Push to secondary repo
-        uses: cpina/github-action-push-to-another-repository@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.PAT_TOKEN }}
-        with:
-          source-directory: '.'
-          destination-github-username: 'oyeowart'
-          destination-repository-name: 'H4K'
-          user-email: github-actions[bot]@users.noreply.github.com
-          target-branch: main
+        run: |
+          git config user.name "oyeowart"
+          git config user.email "oliver.yeowart@cavalrycare.co.uk"
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/oyeowart/H4K.git
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/oyeowart/H4K.git HEAD:main --force

@@ -1,0 +1,20 @@
+name: Sync to Secondary Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to secondary repo
+        run: |
+          git remote add secondary https://${{ secrets.PAT_TOKEN }}@github.com/OYEOWART/H4K.git
+          git push secondary main:main --force
